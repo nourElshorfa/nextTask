@@ -27,7 +27,7 @@ useEffect(() => {
   }, []);
 
   useEffect(()  => {
-    table
+    
     const filtered = post.filter((post) =>
       post.title.toLowerCase().includes(searchTerm.toLowerCase())
     );
