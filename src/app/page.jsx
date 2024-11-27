@@ -1,6 +1,6 @@
 "use client";
 
-import { table } from "console";
+
 import Link from "next/link";
 import { useEffect, useState } from "react"; 
 
