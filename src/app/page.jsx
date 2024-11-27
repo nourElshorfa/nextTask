@@ -1,5 +1,6 @@
 "use client";
 
+import { table } from "console";
 import Link from "next/link";
 import { useEffect, useState } from "react"; 
 
@@ -19,25 +20,20 @@ const [filteredPosts, setFilteredPosts] = useState([]);
   
  
 useEffect(() => {
-  try {
+
     
     getStaticProps()
-  } catch (error) {
-    console.log("api fail to catch data");
-  }
+  
   }, []);
 
   useEffect(()  => {
-    try {
+    table
     const filtered = post.filter((post) =>
       post.title.toLowerCase().includes(searchTerm.toLowerCase())
     );
-
     
     setFilteredPosts(filtered);
-  } catch (error) {
-    console.log("api fail to catch data");
-  }
+ 
   }, [searchTerm, post]); 
 
   const handleSearch = (event) => {
